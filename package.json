@@ -1,0 +1,19 @@
+{
+  "name": "ai-resume-updater",
+  "version": "1.0.0",
+  "description": "AI-powered resume customization platform",
+  "main": "server.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd backend && python -m uvicorn main:app --reload --host 0.0.0.0 --port 8000",
+    "client": "cd frontend && npm start",
+    "build": "cd frontend && npm run build",
+    "install-all": "npm install && cd frontend && npm install && cd ../backend && pip install -r requirements.txt"
+  },
+  "keywords": ["ai", "resume", "job-matching", "azure", "react"],
+  "author": "AI Resume Updater Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
